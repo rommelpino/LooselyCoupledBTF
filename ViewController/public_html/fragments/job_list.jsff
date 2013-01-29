@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelCollection id="pc1">
+    <f:facet name="menus"/>
+    <f:facet name="toolbar">
+      <af:toolbar id="t2">
+        <af:commandToolbarButton text="Refresh" id="ctb1"
+                                 actionListener="#{bindings.Execute.execute}"
+                                 disabled="#{!bindings.Execute.enabled}"
+                                />
+      </af:toolbar>
+    </f:facet>
+    <f:facet name="statusbar"/>
+    <af:table value="#{bindings.Job.collectionModel}" var="row"
+              rows="#{bindings.Job.rangeSize}"
+              emptyText="#{bindings.Job.viewable ? 'No data to display.' : 'Access Denied.'}"
+              fetchSize="#{bindings.Job.rangeSize}" rowBandingInterval="0"
+              selectedRowKeys="#{bindings.Job.collectionModel.selectedRow}"
+              selectionListener="#{bindings.Job.collectionModel.makeCurrent}"
+              rowSelection="single" id="t1" partialTriggers="::ctb1">
+      <af:column sortProperty="jobId" sortable="true"
+                 headerText="#{bindings.Job.hints.jobId.label}" id="c2">
+        <af:commandLink id="ot2" text="#{row.jobId}"
+                        actionListener="#{backingBeanScope.jobListForm.jobSelected}"/>
+      </af:column>
+      <af:column sortProperty="jobTitle" sortable="true"
+                 headerText="#{bindings.Job.hints.jobTitle.label}" id="c4">
+        <af:outputText value="#{row.jobTitle}" id="ot4"/>
+      </af:column>
+      <af:column sortProperty="maxSalary" sortable="true"
+                 headerText="#{bindings.Job.hints.maxSalary.label}" id="c3">
+        <af:outputText value="#{row.maxSalary}" id="ot1">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.Job.hints.maxSalary.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="minSalary" sortable="true"
+                 headerText="#{bindings.Job.hints.minSalary.label}" id="c1">
+        <af:outputText value="#{row.minSalary}" id="ot3">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.Job.hints.minSalary.format}"/>
+        </af:outputText>
+      </af:column>
+    </af:table>
+  </af:panelCollection>
+</jsp:root>

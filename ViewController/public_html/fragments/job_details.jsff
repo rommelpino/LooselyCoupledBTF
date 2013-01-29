@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelHeader text="#{pageFlowScope.editMode? 'Edit ':'View '}Job: #{bindings.jobId}" id="ph2">
+    <f:facet name="context"/>
+    <f:facet name="menuBar"/>
+    <f:facet name="toolbar">
+      <af:toolbar id="t1">
+        <af:commandToolbarButton text="Edit" id="ctb3"
+                                 rendered="#{not pageFlowScope.editMode}"
+                                 actionListener="#{backingBeanScope.jobDetailsForm.edit}"/>
+        <af:commandToolbarButton text="Done" id="ctb4"
+                                 rendered="#{not pageFlowScope.editMode}"
+                                 action="done"/>
+        <af:commandToolbarButton text="Save and Close" id="ctb2"
+                                 rendered="#{pageFlowScope.editMode}"
+                                
+                                 action="done"
+                                 actionListener="#{bindings.mergeJob.execute}"/>
+        <af:commandToolbarButton text="Cancel" id="ctb1"
+                                 action="#{backingBeanScope.jobDetailsForm.cancel}"
+                                 rendered="#{pageFlowScope.editMode}"/>
+      </af:toolbar>
+    </f:facet>
+    <f:facet name="legend"/>
+    <f:facet name="info"/>
+    <af:panelHeader text="Basic Information" id="ph1">
+      <f:facet name="context"/>
+      <f:facet name="menuBar"/>
+      <f:facet name="toolbar"/>
+      <f:facet name="legend"/>
+      <f:facet name="info"/>
+      <af:panelFormLayout id="pfl1" partialTriggers="ctb3 ctb1">
+        <af:inputText value="#{bindings.jobId.inputValue}"
+                      label="#{bindings.jobId.hints.label}"
+                      required="#{bindings.jobId.hints.mandatory}"
+                      columns="#{bindings.jobId.hints.displayWidth}"
+                      maximumLength="#{bindings.jobId.hints.precision}"
+                      shortDesc="#{bindings.jobId.hints.tooltip}" id="it1"
+                      readOnly="#{!pageFlowScope.editMode or bindings.findJobByIdIterator.currentRow.dataProvider.jobId ne null}">
+          <f:validator binding="#{bindings.jobId.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.jobTitle.inputValue}"
+                      label="#{bindings.jobTitle.hints.label}"
+                      required="#{bindings.jobTitle.hints.mandatory}"
+                      columns="#{bindings.jobTitle.hints.displayWidth}"
+                      maximumLength="#{bindings.jobTitle.hints.precision}"
+                      shortDesc="#{bindings.jobTitle.hints.tooltip}" id="it4"
+                      readOnly="#{!pageFlowScope.editMode}">
+          <f:validator binding="#{bindings.jobTitle.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.maxSalary.inputValue}"
+                      label="#{bindings.maxSalary.hints.label}"
+                      required="#{bindings.maxSalary.hints.mandatory}"
+                      columns="#{bindings.maxSalary.hints.displayWidth}"
+                      maximumLength="#{bindings.maxSalary.hints.precision}"
+                      shortDesc="#{bindings.maxSalary.hints.tooltip}" id="it3"
+                      readOnly="#{!pageFlowScope.editMode}">
+          <f:validator binding="#{bindings.maxSalary.validator}"/>
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.maxSalary.format}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.minSalary.inputValue}"
+                      label="#{bindings.minSalary.hints.label}"
+                      required="#{bindings.minSalary.hints.mandatory}"
+                      columns="#{bindings.minSalary.hints.displayWidth}"
+                      maximumLength="#{bindings.minSalary.hints.precision}"
+                      shortDesc="#{bindings.minSalary.hints.tooltip}" id="it2"
+                      readOnly="#{!pageFlowScope.editMode}">
+          <f:validator binding="#{bindings.minSalary.validator}"/>
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.minSalary.format}"/>
+        </af:inputText>
+      </af:panelFormLayout>
+    </af:panelHeader>
+  </af:panelHeader>
+</jsp:root>

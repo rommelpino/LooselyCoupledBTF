@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="Employee" Package="soadev.model" BeanClass="soadev.model.Employee"
+          isJavaBased="true">
+  <Attribute Name="commissionPct" Type="java.lang.Double"/>
+  <Attribute Name="email" Type="java.lang.String"/>
+  <Attribute Name="employeeId" PrimaryKey="true" Type="java.lang.Long"/>
+  <Attribute Name="firstName" Type="java.lang.String"/>
+  <Attribute Name="hireDate" Type="java.sql.Timestamp"/>
+  <Attribute Name="lastName" Type="java.lang.String"/>
+  <Attribute Name="phoneNumber" Type="java.lang.String"/>
+  <Attribute Name="salary" Type="java.lang.Double"/>
+  <Attribute Name="status" Type="java.lang.String"/>
+  <AccessorAttribute id="job" IsCollection="false" BeanClass="soadev.model.Job"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="department" IsCollection="false"
+                     BeanClass="soadev.model.Department"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="manager" IsCollection="false"
+                     BeanClass="soadev.model.Employee"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <ConstructorMethod IsCollection="true" Type="soadev.model.Employee"
+                     BeanClass="soadev.model.Employee" id="Employee"/>
+</JavaBean>

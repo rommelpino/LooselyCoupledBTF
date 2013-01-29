@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.54.12" id="dynamicTabShellDefinition"
+                Package="oracle.ui.pattern.dynamicShell.model">
+  <parameters>
+    <parameter id="tabContext" value="${viewScope.tabContext}"/>
+  </parameters>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="r0"
+              taskFlowId="${viewScope.tabContext.tabs[0].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[0].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r1"
+              taskFlowId="${viewScope.tabContext.tabs[1].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[1].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r2"
+              taskFlowId="${viewScope.tabContext.tabs[2].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[2].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r3"
+              taskFlowId="${viewScope.tabContext.tabs[3].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[3].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r4"
+              taskFlowId="${viewScope.tabContext.tabs[4].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[4].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r5"
+              taskFlowId="${viewScope.tabContext.tabs[5].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[5].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r6"
+              taskFlowId="${viewScope.tabContext.tabs[6].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[6].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r7"
+              taskFlowId="${viewScope.tabContext.tabs[7].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[7].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r8"
+              taskFlowId="${viewScope.tabContext.tabs[8].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[8].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r9"
+              taskFlowId="${viewScope.tabContext.tabs[9].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[9].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r10"
+              taskFlowId="${viewScope.tabContext.tabs[10].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[10].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r11"
+              taskFlowId="${viewScope.tabContext.tabs[11].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[11].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r12"
+              taskFlowId="${viewScope.tabContext.tabs[12].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[12].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r13"
+              taskFlowId="${viewScope.tabContext.tabs[13].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[13].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="r14"
+              taskFlowId="${viewScope.tabContext.tabs[14].taskflowId}"
+              parametersMap="${viewScope.tabContext.tabs[14].parameters}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="tabContext" value="${bindings.tabContext}"
+                   xmlns="http://xmlns.oracle.com/adfm/uimodel"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings>
+    <methodAction id="handleMessage"
+                  InstanceName="DynamicShellHelper.dataProvider"
+                  DataControl="DynamicShellHelper" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="handleMessage"
+                  IsViewObjectMethod="false">
+      <NamedData NDName="tabContext"
+                 NDType="oracle.ui.pattern.dynamicShell.TabContext"/>
+      <NamedData NDName="messenger"
+                 NDType="soadev.ext.adf.taskflows.helper.Messenger"/>
+    </methodAction>
+    <methodAction id="launchActivity"
+                  InstanceName="DynamicShellHelper.dataProvider"
+                  DataControl="DynamicShellHelper" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="launchActivity"
+                  IsViewObjectMethod="false">
+      <NamedData NDName="tabContext"
+                 NDType="oracle.ui.pattern.dynamicShell.TabContext"/>
+      <NamedData NDName="title" NDType="java.lang.String"/>
+      <NamedData NDName="taskFlowId" NDType="java.lang.String"/>
+      <NamedData NDName="parameterMap" NDType="java.util.Map"/>
+      <NamedData NDName="newTab" NDType="boolean"/>
+    </methodAction>
+    <methodAction id="markCurrentTabDirty"
+                  InstanceName="DynamicShellHelper.dataProvider"
+                  DataControl="DynamicShellHelper" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="markCurrentTabDirty"
+                  IsViewObjectMethod="false">
+      <NamedData NDName="tabContext" NDValue=""
+                 NDType="oracle.ui.pattern.dynamicShell.TabContext"/>
+      <NamedData NDName="isDirty" NDValue="" NDType="java.lang.Boolean"/>
+    </methodAction>
+  </bindings>
+  <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="transDirtyEvent">
+      <producer region="*">
+        <consumer handler="markCurrentTabDirty">
+          <parameters>
+            <parameter name="tabContext" value="#{viewScope.tabContext}"/>
+            <parameter name="isDirty" value="#{payLoad}"/>
+          </parameters>
+        </consumer>
+      </producer>
+    </event>
+    <event name="messageEvent">
+      <producer region="*">
+        <consumer handler="handleMessage">
+          <parameters>
+            <parameter name="tabContext" value="#{viewScope.tabContext}"/>
+            <parameter name="messenger" value="#{payLoad}"/>
+          </parameters>
+        </consumer>
+      </producer>
+    </event>
+    <event name="launchActivityEvent">
+      <producer region="*">
+        <consumer handler="launchActivity">
+          <parameters>
+            <parameter name="tabContext" value="#{viewScope.tabContext}"/>
+            <parameter name="title" value="#{payLoad.title}"/>
+            <parameter name="taskFlowId" value="#{payLoad.taskFlowId}"/>
+            <parameter name="parameterMap" value="#{payLoad}"/>
+            <parameter name="newTab" value="true"/>
+          </parameters>
+        </consumer>
+      </producer>
+    </event>
+  </eventMap>
+</pageDefinition>

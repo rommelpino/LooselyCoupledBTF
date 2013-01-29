@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="job_detailsPageDef"
+                Package="fragments">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="findJobById.result" DataControl="SessionEJBLocal"
+                    RangeSize="25" BeanClass="soadev.model.Job"
+                    id="findJobByIdIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="findJobById" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="findJobById"
+                  IsViewObjectMethod="false" DataControl="SessionEJBLocal"
+                  InstanceName="SessionEJBLocal.dataProvider"
+                  ReturnName="SessionEJBLocal.methodResults.findJobById_SessionEJBLocal_dataProvider_findJobById_result">
+      <NamedData NDName="id" NDValue="#{pageFlowScope.jobId}"
+                 NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="produceEvent" InstanceName="EventProducer.dataProvider"
+                  DataControl="EventProducer" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="produceEvent"
+                  IsViewObjectMethod="false">
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="messageEvent"/>
+      </events>
+    </methodAction>
+    <methodAction id="transDirtyProducer" InstanceName="EventProducer.dataProvider"
+                  DataControl="EventProducer" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="produceEvent"
+                  IsViewObjectMethod="false">
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="transDirtyEvent"/>
+      </events>
+    </methodAction>
+    <attributeValues IterBinding="findJobByIdIterator" id="jobId">
+      <AttrNames>
+        <Item Value="jobId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="findJobByIdIterator" id="jobTitle">
+      <AttrNames>
+        <Item Value="jobTitle"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="findJobByIdIterator" id="maxSalary">
+      <AttrNames>
+        <Item Value="maxSalary"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="findJobByIdIterator" id="minSalary">
+      <AttrNames>
+        <Item Value="minSalary"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="mergeJob" InstanceName="SessionEJBLocal.dataProvider"
+                  DataControl="SessionEJBLocal" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="mergeJob"
+                  IsViewObjectMethod="false"
+                  ReturnName="SessionEJBLocal.methodResults.mergeJob_SessionEJBLocal_dataProvider_mergeJob_result">
+      <NamedData NDName="job"
+                 NDValue="#{bindings.findJobByIdIterator.currentRow.dataProvider}"
+                 NDType="soadev.model.Job"/>
+      <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="transDirtyEvent" customPayLoad="false"/>
+        <event name="mergeJobEvent"/>
+      </events>
+    </methodAction>
+  </bindings>
+</pageDefinition>

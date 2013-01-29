@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="NavigationEvent" Package="oracle.adf.controller.internal"
+          BeanClass="oracle.adf.controller.internal.NavigationEvent"
+          isJavaBased="true">
+  <AccessorAttribute id="previousViewActivityId" IsCollection="false"
+                     BeanClass="oracle.adf.controller.internal.metadata.ActivityId"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="newViewActivityId" IsCollection="false"
+                     BeanClass="oracle.adf.controller.internal.metadata.ActivityId"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+</JavaBean>

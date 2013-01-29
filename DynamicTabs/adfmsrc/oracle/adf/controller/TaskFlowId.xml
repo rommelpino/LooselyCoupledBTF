@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="TaskFlowId" Package="oracle.adf.controller"
+          BeanClass="oracle.adf.controller.TaskFlowId" isJavaBased="true">
+  <Attribute Name="documentName" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="localTaskFlowId" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="fullyQualifiedName" IsUpdateable="0"
+             Type="java.lang.String"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="oracle.adf.controller.TaskFlowId"
+                  BeanClass="oracle.adf.controller.TaskFlowId" id="parse"
+                  ReturnNodeName="TaskFlowId">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="oracle.adf.controller.TaskFlowId"
+                     BeanClass="oracle.adf.controller.TaskFlowId"
+                     id="TaskFlowId">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="oracle.adf.controller.TaskFlowId"
+                     BeanClass="oracle.adf.controller.TaskFlowId"
+                     id="TaskFlowId">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="p1" Type="java.lang.String" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

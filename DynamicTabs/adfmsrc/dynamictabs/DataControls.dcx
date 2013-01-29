@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="11.1.1.56.60" id="DataControls"
+                    Package="dynamictabs">
+  <AdapterDataControl id="DynamicShellHelper"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="oracle.ui.pattern.dynamicShell.DynamicShellHelper"
+                      BeanClass="oracle.ui.pattern.dynamicShell.DynamicShellHelper"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="oracle.adf.controller.TaskFlowId"/>
+      <TypeInfo FullName="oracle.adf.controller.internal.metadata.ActivityId"/>
+      <TypeInfo FullName="oracle.adf.controller.internal.ParentActionEvent"/>
+      <TypeInfo FullName="oracle.adf.controller.security.AuthorizationException"/>
+      <TypeInfo FullName="oracle.adf.controller.savepoint.SavePointAttributes"/>
+      <TypeInfo FullName="oracle.adf.view.rich.component.fragment.RegionSite"/>
+      <TypeInfo FullName="oracle.adf.view.rich.model.RegionModel"/>
+      <TypeInfo FullName="oracle.adf.controller.internal.binding.DCTaskFlowBinding"/>
+      <TypeInfo FullName="oracle.adf.view.rich.render.ClientEvent"/>
+      <TypeInfo FullName="oracle.adf.view.rich.event.ClientListenerSet"/>
+      <TypeInfo FullName="oracle.adf.view.rich.component.rich.nav.RichNavigationPane"/>
+      <TypeInfo FullName="oracle.adf.view.rich.component.rich.layout.RichPanelStretchLayout"/>
+      <TypeInfo FullName="oracle.adf.view.rich.event.PopupFetchEvent"/>
+      <TypeInfo FullName="oracle.adf.view.rich.event.PopupCanceledEvent"/>
+      <TypeInfo FullName="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"/>
+      <TypeInfo FullName="oracle.adf.view.rich.component.rich.RichPopup"/>
+      <TypeInfo FullName="oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout"/>
+      <TypeInfo FullName="soadev.ext.adf.taskflows.helper.Messenger"/>
+      <TypeInfo FullName="oracle.adf.view.rich.event.DialogEvent"/>
+      <TypeInfo FullName="oracle.ui.pattern.dynamicShell.TabContext"/>
+      <TypeInfo FullName="oracle.ui.pattern.dynamicShell.DynamicShellHelper"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="oracle.ui.pattern.dynamicShell.DynamicShellHelper"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

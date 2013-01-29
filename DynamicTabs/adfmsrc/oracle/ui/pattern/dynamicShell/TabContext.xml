@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="TabContext" Package="oracle.ui.pattern.dynamicShell"
+          BeanClass="oracle.ui.pattern.dynamicShell.TabContext"
+          isJavaBased="true">
+  <Attribute Name="tagSetDirty" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="currentTabDirty" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="selectedTabIndex" Type="int"/>
+  <Attribute Name="tabsRendered" Type="boolean"/>
+  <AccessorAttribute id="tabs" IsCollection="true"
+                     BeanClass="oracle.ui.pattern.dynamicShell.Tab"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="tabMenuModel" IsCollection="true"
+                     Type="org.apache.myfaces.trinidad.model.MenuModel"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element"
+               Type="org.apache.myfaces.trinidad.model.MenuModel"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="tabsNavigationPane" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.component.rich.nav.RichNavigationPane"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="toolbarArea" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.component.rich.layout.RichPanelStretchLayout"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="tooManyTabsPopup" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.component.rich.RichPopup"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="tabDirtyPopup" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.component.rich.RichPopup"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="innerToolbarArea" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="contentArea" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.component.rich.layout.RichPanelStretchLayout"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="messenger" IsCollection="false"
+                     BeanClass="soadev.ext.adf.taskflows.helper.Messenger"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.ui.pattern.dynamicShell.TabContext"
+                  BeanClass="oracle.ui.pattern.dynamicShell.TabContext"
+                  id="getCurrentInstance" ReturnNodeName="TabContext"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setMainContent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="setMainContent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="parameters" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addOrSelectTab"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="localizedName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addOrSelectTab"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="localizedName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="parameters" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addTab"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="localizedName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addTab"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="localizedName" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="parameters" Type="java.util.Map" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="markCurrentTabDirty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="isDirty" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="markTabDirty"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+    <ParameterInfo id="isDirty" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeCurrentTab"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="removeTab"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="index" Type="int" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="getFirstTabIndex"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="taskflowId" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="tabActivatedEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="action" Type="javax.faces.event.ActionEvent"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="tabRemovedEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="action" Type="javax.faces.event.ActionEvent"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="handleDirtyTabDialog"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="ev" Type="oracle.adf.view.rich.event.DialogEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="showTabDirtyPopup"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.ui.pattern.dynamicShell.TabContext"
+                     BeanClass="oracle.ui.pattern.dynamicShell.TabContext"
+                     id="TabContext"/>
+</JavaBean>

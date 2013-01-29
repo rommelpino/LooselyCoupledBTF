@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="SavePointAttributes" Package="oracle.adf.controller.savepoint"
+          BeanClass="oracle.adf.controller.savepoint.SavePointAttributes"
+          isJavaBased="true">
+  <Attribute Name="name" Type="java.lang.String"/>
+  <Attribute Name="description" Type="java.lang.String"/>
+  <AccessorAttribute id="userAttributes" IsCollection="true"
+                     Type="java.util.Map"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String, java.io.Serializable"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.controller.savepoint.SavePointAttributes"
+                     BeanClass="oracle.adf.controller.savepoint.SavePointAttributes"
+                     id="SavePointAttributes">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="p1" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="p2" Type="java.util.Map" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

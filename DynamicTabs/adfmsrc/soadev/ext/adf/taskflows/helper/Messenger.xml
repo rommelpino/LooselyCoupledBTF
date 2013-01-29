@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="Messenger" Package="soadev.ext.adf.taskflows.helper"
+          BeanClass="soadev.ext.adf.taskflows.helper.Messenger"
+          isJavaBased="true">
+  <Attribute Name="accepted" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="affirmativeOutcome" Type="java.lang.String"/>
+  <Attribute Name="negativeOutcome" Type="java.lang.String"/>
+  <Attribute Name="region" Type="java.lang.String"/>
+  <MethodAccessor IsCollection="false" Type="void" id="accept"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="affirmativeOutcomeCallback" ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="negativeOutcomeCallback"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="handleOuterPageAction"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="outcome" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="soadev.ext.adf.taskflows.helper.Messenger"
+                     BeanClass="soadev.ext.adf.taskflows.helper.Messenger"
+                     id="Messenger"/>
+</JavaBean>

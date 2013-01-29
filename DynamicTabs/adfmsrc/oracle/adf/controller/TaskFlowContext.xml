@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="TaskFlowContext" Package="oracle.adf.controller"
+          BeanClass="oracle.adf.controller.TaskFlowContext" isJavaBased="true">
+  <Attribute Name="dataDirty" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="taskFlowId" IsCollection="false"
+                     BeanClass="oracle.adf.controller.TaskFlowId"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="trainModel" IsCollection="true"
+                     Type="org.apache.myfaces.trinidad.model.MenuModel"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element"
+               Type="org.apache.myfaces.trinidad.model.MenuModel"/>
+  </AccessorAttribute>
+</JavaBean>

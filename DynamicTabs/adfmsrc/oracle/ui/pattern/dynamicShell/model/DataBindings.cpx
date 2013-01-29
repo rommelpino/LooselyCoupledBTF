@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.54.12" id="DataBindings" SeparateXMLFiles="false"
+             Package="oracle.ui.pattern.dynamicShell.model" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/oracle/ui/pattern/dynamicShell/dynamicTabShell.jspx" usageId="oracle_templates_dynamicShell_pageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_templates_dynamicShell_pageDef"
+          path="oracle.ui.pattern.dynamicShell.model.dynamicTabShellDefinition"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="DynamicShellHelper" path="dynamictabs.DynamicShellHelper"/>
+  </dataControlUsages>
+</Application>

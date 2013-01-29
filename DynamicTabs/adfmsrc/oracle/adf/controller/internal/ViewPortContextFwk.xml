@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="ViewPortContextFwk" Package="oracle.adf.controller.internal"
+          BeanClass="oracle.adf.controller.internal.ViewPortContextFwk"
+          isJavaBased="true">
+  <Attribute Name="actionCases" IsUpdateable="0"
+             Type="java.util.LinkedHashMap&lt;java.lang.String, oracle.adf.controller.internal.metadata.ControlFlowCase>"/>
+  <Attribute Name="rootViewPort" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="viewPortId" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="clientId" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="viewId" Type="java.lang.String"/>
+  <Attribute Name="viewBookmarkable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="exceptionData" IsUpdateable="0" Type="java.lang.Exception"/>
+  <Attribute Name="empty" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="exceptionPresent" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="dataDirty" IsUpdateable="0" Type="boolean"/>
+  <AccessorAttribute id="parentViewPort" IsCollection="false"
+                     BeanClass="oracle.adf.controller.internal.ViewPortContextFwk"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="rootViewPort" IsCollection="false"
+                     BeanClass="oracle.adf.controller.internal.ViewPortContextFwk"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="viewActivityId" IsCollection="false"
+                     BeanClass="oracle.adf.controller.internal.metadata.ActivityId"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="initialTaskFlowId" IsCollection="false"
+                     BeanClass="oracle.adf.controller.TaskFlowId"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="navigationListeners" IsCollection="true"
+                     RemoveMethod="removeNavigationListener"
+                     AddMethod="addNavigationListener"
+                     BeanClass="oracle.adf.controller.internal.NavigationListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeNavigationListener"/>
+      <Property Name="AddMethod" Value="addNavigationListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="parentActionEvents" IsCollection="true"
+                     BeanClass="oracle.adf.controller.internal.ParentActionEvent"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="taskFlowContext" IsCollection="false"
+                     BeanClass="oracle.adf.controller.TaskFlowContext"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.adf.controller.internal.ViewPortContextFwk"
+                  BeanClass="oracle.adf.controller.internal.ViewPortContextFwk"
+                  id="getChildViewPortByClientId"
+                  ReturnNodeName="ViewPortContextFwk">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addNavigationListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.controller.internal.NavigationListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeNavigationListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.controller.internal.NavigationListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="getPhysicalURI" ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="handleAuthorizationFailure" ReturnNodeName="Return">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.controller.security.AuthorizationException"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="clearParentActionEvents"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="createSavePoint" ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="p1"
+                   Type="oracle.adf.controller.savepoint.SavePointAttributes"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String"
+                  id="createSavePoint" ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="clearException"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setSavePointTimeToLive"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="long" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

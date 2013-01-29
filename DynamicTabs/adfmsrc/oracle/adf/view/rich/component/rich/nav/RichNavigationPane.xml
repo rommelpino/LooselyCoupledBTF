@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="RichNavigationPane"
+          Package="oracle.adf.view.rich.component.rich.nav"
+          BeanClass="oracle.adf.view.rich.component.rich.nav.RichNavigationPane"
+          isJavaBased="true">
+  <Attribute Name="inlineStyle" Type="java.lang.String"/>
+  <Attribute Name="styleClass" Type="java.lang.String"/>
+  <Attribute Name="shortDesc" Type="java.lang.String"/>
+  <Attribute Name="visible" Type="boolean"/>
+  <Attribute Name="customizationId" Type="java.lang.String"/>
+  <Attribute Name="clientComponent" Type="boolean"/>
+  <Attribute Name="disabled" Type="boolean"/>
+  <Attribute Name="hint" Type="java.lang.String"/>
+  <Attribute Name="title" Type="java.lang.String"/>
+  <Attribute Name="family" IsUpdateable="0" Type="java.lang.String"/>
+  <AccessorAttribute id="unsecure" IsCollection="true" Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="clientAttributes" IsCollection="true"
+                     Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="partialTriggers" IsCollection="true"
+                     Type="java.lang.String[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="clientListeners" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.event.ClientListenerSet"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.component.rich.nav.RichNavigationPane"
+                     BeanClass="oracle.adf.view.rich.component.rich.nav.RichNavigationPane"
+                     id="RichNavigationPane"/>
+</JavaBean>

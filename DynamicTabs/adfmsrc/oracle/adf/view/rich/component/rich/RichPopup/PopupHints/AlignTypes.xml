@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="AlignTypes"
+          Package="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+          BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.AlignTypes"
+          isJavaBased="true">
+  <Attribute Name="mnemonic" IsUpdateable="0" Type="java.lang.String"/>
+  <MethodAccessor IsCollection="true"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.AlignTypes"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.AlignTypes"
+                  id="values" ReturnNodeName="AlignTypes"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.AlignTypes"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.AlignTypes"
+                  id="valueOf" ReturnNodeName="AlignTypes">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+</JavaBean>

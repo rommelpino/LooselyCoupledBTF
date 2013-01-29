@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="Job" Package="soadev.model" BeanClass="soadev.model.Job"
+          isJavaBased="true">
+  <Attribute Name="jobId" PrimaryKey="true" Type="java.lang.String"/>
+  <Attribute Name="jobTitle" Type="java.lang.String"/>
+  <Attribute Name="maxSalary" Type="java.lang.Long"/>
+  <Attribute Name="minSalary" Type="java.lang.Long"/>
+  <AccessorAttribute id="employeeList" IsCollection="true"
+                     RemoveMethod="removeEmployee" AddMethod="addEmployee"
+                     BeanClass="soadev.model.Employee"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removeEmployee"/>
+      <Property Name="AddMethod" Value="addEmployee"/>
+    </Properties>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Employee"
+                  BeanClass="soadev.model.Employee" id="addEmployee"
+                  ReturnNodeName="Employee">
+    <ParameterInfo id="employee" Type="soadev.model.Employee"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Employee"
+                  BeanClass="soadev.model.Employee" id="removeEmployee"
+                  ReturnNodeName="Employee">
+    <ParameterInfo id="employee" Type="soadev.model.Employee"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true" Type="soadev.model.Job"
+                     BeanClass="soadev.model.Job" id="Job">
+    <ParameterInfo id="jobId" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="jobTitle" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="maxSalary" Type="java.lang.Long" isStructured="false"/>
+    <ParameterInfo id="minSalary" Type="java.lang.Long" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true" Type="soadev.model.Job"
+                     BeanClass="soadev.model.Job" id="Job"/>
+</JavaBean>

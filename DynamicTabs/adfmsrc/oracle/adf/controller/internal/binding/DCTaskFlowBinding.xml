@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="DCTaskFlowBinding"
+          Package="oracle.adf.controller.internal.binding"
+          BeanClass="oracle.adf.controller.internal.binding.DCTaskFlowBinding"
+          isJavaBased="true">
+  <Attribute Name="viewPortId" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="viewable" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="inPrepareRenderPhase" Type="boolean"/>
+  <Attribute Name="dirty" IsUpdateable="0" Type="boolean"/>
+  <Attribute Name="debugValue" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="fullTaskFlowId" IsUpdateable="0" Type="java.lang.String"/>
+  <AccessorAttribute id="viewPort" IsCollection="false"
+                     BeanClass="oracle.adf.controller.internal.ViewPortContextFwk"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="regionModel" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.model.RegionModel"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="regionController" IsCollection="true"
+                     Type="oracle.adf.model.RegionController"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element" Type="oracle.adf.model.RegionController"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="taskFlowId" IsCollection="false"
+                     BeanClass="oracle.adf.controller.TaskFlowId"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="addNestedBindingContainer" ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="oracle.adf.model.binding.DCBindingContainer"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isViewableInternal"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="oracle.adf.controller.TaskFlowId"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="releaseViewPort"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setDefaultSecurity"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="validateToken"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="shouldRefreshRegion"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="setDirtyFlag"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="boolean" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="refreshIfNeeded"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="debugBeforeBegin"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="debugAfterBegin"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="debugBeforeEnd"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="debugAfterEnd"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.controller.internal.binding.DCTaskFlowBinding"
+                     BeanClass="oracle.adf.controller.internal.binding.DCTaskFlowBinding"
+                     id="DCTaskFlowBinding"/>
+</JavaBean>

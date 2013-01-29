@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.56.60" id="job_listPageDef" Package="fragments">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="findAllJobs.result" DataControl="SessionEJBLocal"
+                    RangeSize="25" BeanClass="soadev.model.Job"
+                    id="findAllJobsIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="findAllJobs" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="findAllJobs"
+                  IsViewObjectMethod="false" DataControl="SessionEJBLocal"
+                  InstanceName="SessionEJBLocal.dataProvider"
+                  ReturnName="SessionEJBLocal.methodResults.findAllJobs_SessionEJBLocal_dataProvider_findAllJobs_result"/>
+    <tree IterBinding="findAllJobsIterator" id="Job">
+      
+      <nodeDefinition DefName="soadev.model.Job" Name="Job0">
+        <AttrNames>
+          <Item Value="jobId"/>
+          <Item Value="jobTitle"/>
+          <Item Value="maxSalary"/>
+          <Item Value="minSalary"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="produceEvent" InstanceName="EventProducer.dataProvider"
+                  DataControl="EventProducer" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="produceEvent"
+                  IsViewObjectMethod="false">
+    <events xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+        <event name="launchActivityEvent" />
+      </events>              
+    </methodAction>
+    <action IterBinding="findAllJobsIterator" id="Execute"
+            RequiresUpdateModel="true" Action="iteratorExecute"/>
+  </bindings>
+  <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="mergeJobEvent">
+      <producer region="*">
+        <consumer handler="Execute"/>
+      </producer>
+    </event>
+  </eventMap>
+</pageDefinition>

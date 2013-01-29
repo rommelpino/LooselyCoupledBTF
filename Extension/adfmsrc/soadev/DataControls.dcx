@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="11.1.1.56.60" id="DataControls" Package="soadev">
+  <AdapterDataControl id="EventProducer"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="soadev.ext.adf.contextualevents.EventProducer"
+                      BeanClass="soadev.ext.adf.contextualevents.EventProducer"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="soadev.ext.adf.contextualevents.EventProducer"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="soadev.ext.adf.contextualevents.EventProducer"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="EventHandler"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="soadev.ext.adf.contextualevents.EventHandler"
+                      BeanClass="soadev.ext.adf.contextualevents.EventHandler"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="soadev.ext.adf.contextualevents.EventHandler"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="soadev.ext.adf.contextualevents.EventHandler"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

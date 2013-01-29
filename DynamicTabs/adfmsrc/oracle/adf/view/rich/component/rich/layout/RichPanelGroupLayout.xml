@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="RichPanelGroupLayout"
+          Package="oracle.adf.view.rich.component.rich.layout"
+          BeanClass="oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout"
+          isJavaBased="true">
+  <Attribute Name="inlineStyle" Type="java.lang.String"/>
+  <Attribute Name="styleClass" Type="java.lang.String"/>
+  <Attribute Name="shortDesc" Type="java.lang.String"/>
+  <Attribute Name="visible" Type="boolean"/>
+  <Attribute Name="customizationId" Type="java.lang.String"/>
+  <Attribute Name="clientComponent" Type="boolean"/>
+  <Attribute Name="theme" Type="java.lang.String"/>
+  <Attribute Name="layout" Type="java.lang.String"/>
+  <Attribute Name="valign" Type="java.lang.String"/>
+  <Attribute Name="halign" Type="java.lang.String"/>
+  <Attribute Name="landmark" Type="java.lang.String"/>
+  <Attribute Name="family" IsUpdateable="0" Type="java.lang.String"/>
+  <AccessorAttribute id="separator" IsCollection="true"
+                     Type="javax.faces.component.UIComponent"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element" Type="javax.faces.component.UIComponent"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="unsecure" IsCollection="true" Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="clientAttributes" IsCollection="true"
+                     Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="partialTriggers" IsCollection="true"
+                     Type="java.lang.String[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="clientListeners" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.event.ClientListenerSet"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout"
+                     BeanClass="oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout"
+                     id="RichPanelGroupLayout"/>
+</JavaBean>

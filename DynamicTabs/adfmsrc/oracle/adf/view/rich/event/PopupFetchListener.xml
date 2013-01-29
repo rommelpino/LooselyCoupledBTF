@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="PopupFetchListener" Package="oracle.adf.view.rich.event"
+          BeanClass="oracle.adf.view.rich.event.PopupFetchListener"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="processPopupFetch"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="oracle.adf.view.rich.event.PopupFetchEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

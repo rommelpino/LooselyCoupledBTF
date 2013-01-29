@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.62.29"
+          id="EventHandler" Package="soadev.ext.adf.contextualevents"
+          BeanClass="soadev.ext.adf.contextualevents.EventHandler"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="setExpressionValue"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="expression" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="newValue" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="soadev.ext.adf.contextualevents.EventHandler"
+                     BeanClass="soadev.ext.adf.contextualevents.EventHandler"
+                     id="EventHandler"/>
+</JavaBean>

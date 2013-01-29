@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="SessionEJBLocal" Package="soadev.model"
+          BeanClass="soadev.model.SessionEJBLocal" isJavaBased="true">
+  <AccessorAttribute id="employeeFindAll" IsCollection="true"
+                     BeanClass="soadev.model.Employee"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="departmentFindAll" IsCollection="true"
+                     BeanClass="soadev.model.Department"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Job"
+                  BeanClass="soadev.model.Job" id="persistJob"
+                  ReturnNodeName="Job">
+    <ParameterInfo id="job" Type="soadev.model.Job" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Job"
+                  BeanClass="soadev.model.Job" id="mergeJob"
+                  ReturnNodeName="Job">
+    <ParameterInfo id="job" Type="soadev.model.Job" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeJob"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="job" Type="soadev.model.Job" isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Employee"
+                  BeanClass="soadev.model.Employee" id="persistEmployee"
+                  ReturnNodeName="Employee">
+    <ParameterInfo id="employee" Type="soadev.model.Employee"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Employee"
+                  BeanClass="soadev.model.Employee" id="mergeEmployee"
+                  ReturnNodeName="Employee">
+    <ParameterInfo id="employee" Type="soadev.model.Employee"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeEmployee"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="employee" Type="soadev.model.Employee"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Department"
+                  BeanClass="soadev.model.Department" id="persistDepartment"
+                  ReturnNodeName="Department">
+    <ParameterInfo id="department" Type="soadev.model.Department"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Department"
+                  BeanClass="soadev.model.Department" id="mergeDepartment"
+                  ReturnNodeName="Department">
+    <ParameterInfo id="department" Type="soadev.model.Department"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removeDepartment"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="department" Type="soadev.model.Department"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="soadev.model.Job"
+                  BeanClass="soadev.model.Job" id="findAllJobs"
+                  ReturnNodeName="Job"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false" Type="soadev.model.Job"
+                  BeanClass="soadev.model.Job" id="findJobById"
+                  ReturnNodeName="Job">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

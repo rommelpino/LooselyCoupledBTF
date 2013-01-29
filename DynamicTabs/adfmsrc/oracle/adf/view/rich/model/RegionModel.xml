@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="RegionModel" Package="oracle.adf.view.rich.model"
+          BeanClass="oracle.adf.view.rich.model.RegionModel" isJavaBased="true">
+  <AccessorAttribute id="capabilities" IsCollection="true" Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="actions" IsCollection="true" Type="java.util.List"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="regionComponentClientIds" IsCollection="true"
+                     Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="void" id="processBeginRegion"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processBeginRegion"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+    <ParameterInfo id="p1"
+                   Type="oracle.adf.view.rich.component.fragment.RegionSite"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processEndRegion"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processEndRegion"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+    <ParameterInfo id="p1"
+                   Type="oracle.adf.view.rich.component.fragment.RegionSite"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="refresh"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="getViewId"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.model.RegionModel"
+                     BeanClass="oracle.adf.view.rich.model.RegionModel"
+                     id="RegionModel"/>
+</JavaBean>

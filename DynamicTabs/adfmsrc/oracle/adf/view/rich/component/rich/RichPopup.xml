@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="RichPopup" Package="oracle.adf.view.rich.component.rich"
+          BeanClass="oracle.adf.view.rich.component.rich.RichPopup"
+          isJavaBased="true">
+  <Attribute Name="contentDelivery" Type="java.lang.String"/>
+  <Attribute Name="animate" Type="java.lang.String"/>
+  <Attribute Name="eventContext" Type="java.lang.String"/>
+  <Attribute Name="launcherVar" Type="java.lang.String"/>
+  <Attribute Name="customizationId" Type="java.lang.String"/>
+  <Attribute Name="clientComponent" Type="boolean"/>
+  <Attribute Name="visible" Type="boolean"/>
+  <Attribute Name="autoCancel" Type="java.lang.String"/>
+  <Attribute Name="childCreation" Type="java.lang.String"/>
+  <Attribute Name="family" IsUpdateable="0" Type="java.lang.String"/>
+  <AccessorAttribute id="popupFetchListener" IsCollection="true"
+                     Type="javax.el.MethodExpression"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element" Type="javax.el.MethodExpression"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="popupCanceledListener" IsCollection="true"
+                     Type="javax.el.MethodExpression"
+                     CollectionBeanClass="UpdateableSingleValue">
+    <Attribute Name="element" Type="javax.el.MethodExpression"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="clientAttributes" IsCollection="true"
+                     Type="java.util.Set"
+                     CollectionBeanClass="UpdateableCollection"/>
+  <AccessorAttribute id="partialTriggers" IsCollection="true"
+                     Type="java.lang.String[]"
+                     CollectionBeanClass="UpdateableCollection">
+    <Attribute Name="element" Type="java.lang.String"/>
+  </AccessorAttribute>
+  <AccessorAttribute id="clientListeners" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.event.ClientListenerSet"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <AccessorAttribute id="popupFetchListeners" IsCollection="true"
+                     RemoveMethod="removePopupFetchListener"
+                     AddMethod="addPopupFetchListener"
+                     BeanClass="oracle.adf.view.rich.event.PopupFetchListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removePopupFetchListener"/>
+      <Property Name="AddMethod" Value="addPopupFetchListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="popupCanceledListeners" IsCollection="true"
+                     RemoveMethod="removePopupCanceledListener"
+                     AddMethod="addPopupCanceledListener"
+                     BeanClass="oracle.adf.view.rich.event.PopupCanceledListener"
+                     CollectionBeanClass="UpdateableCollection">
+    <Properties>
+      <Property Name="RemoveMethod" Value="removePopupCanceledListener"/>
+      <Property Name="AddMethod" Value="addPopupCanceledListener"/>
+    </Properties>
+  </AccessorAttribute>
+  <MethodAccessor IsCollection="false" Type="void" id="broadcast"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.event.FacesEvent"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="queueEvent"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.event.FacesEvent"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="show"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="cancel"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="hide"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="void" id="addPopupFetchListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="oracle.adf.view.rich.event.PopupFetchListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="removePopupFetchListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="oracle.adf.view.rich.event.PopupFetchListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="addPopupCanceledListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.view.rich.event.PopupCanceledListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void"
+                  id="removePopupCanceledListener" ReturnNodeName="Return">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.view.rich.event.PopupCanceledListener"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processDecodes"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.component.rich.RichPopup"
+                     BeanClass="oracle.adf.view.rich.component.rich.RichPopup"
+                     id="RichPopup"/>
+</JavaBean>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="RegionSite" Package="oracle.adf.view.rich.component.fragment"
+          BeanClass="oracle.adf.view.rich.component.fragment.RegionSite"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="queueParentOutcome"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+    <ParameterInfo id="p1" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="queueRootOutcome"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.context.FacesContext"
+                   isStructured="false"/>
+    <ParameterInfo id="p1" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.component.fragment.RegionSite"
+                     BeanClass="oracle.adf.view.rich.component.fragment.RegionSite"
+                     id="RegionSite"/>
+</JavaBean>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="PopupHints"
+          Package="oracle.adf.view.rich.component.rich.RichPopup"
+          BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                  id="add" ReturnNodeName="PopupHints">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                   isStructured="true"/>
+    <ParameterInfo id="p1" Type="javax.faces.component.UIComponent"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                  id="add" ReturnNodeName="PopupHints">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                   isStructured="true"/>
+    <ParameterInfo id="p1" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                  id="add" ReturnNodeName="PopupHints">
+    <ParameterInfo id="p0"
+                   Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                   isStructured="true"/>
+    <ParameterInfo id="p1"
+                   Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.AlignTypes"
+                   isStructured="true"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                     BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+                     id="PopupHints"/>
+</JavaBean>

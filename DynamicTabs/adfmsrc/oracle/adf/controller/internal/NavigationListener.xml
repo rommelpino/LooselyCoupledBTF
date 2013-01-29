@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="NavigationListener" Package="oracle.adf.controller.internal"
+          BeanClass="oracle.adf.controller.internal.NavigationListener"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="void" id="notify"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="oracle.adf.controller.internal.NavigationEvent"
+                   isStructured="true"/>
+  </MethodAccessor>
+</JavaBean>

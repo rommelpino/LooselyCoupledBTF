@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="DialogEvent" Package="oracle.adf.view.rich.event"
+          BeanClass="oracle.adf.view.rich.event.DialogEvent" isJavaBased="true">
+  <AccessorAttribute id="outcome" IsCollection="false"
+                     BeanClass="oracle.adf.view.rich.event.DialogEvent.Outcome"
+                     CollectionBeanClass="UpdateableSingleValue"/>
+  <MethodAccessor IsCollection="false" Type="void" id="processListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.event.FacesListener"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="boolean" id="isAppropriateListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.event.FacesListener"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="int" id="hashCode"
+                  ReturnNodeName="Return"/>
+  <MethodAccessor IsCollection="false" Type="boolean" id="equals"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="java.lang.Object" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.event.DialogEvent"
+                     BeanClass="oracle.adf.view.rich.event.DialogEvent"
+                     id="DialogEvent">
+    <ParameterInfo id="p0" Type="javax.faces.component.UIComponent"
+                   isStructured="false"/>
+    <ParameterInfo id="p1" Type="oracle.adf.view.rich.event.DialogEvent.Outcome"
+                   isStructured="true"/>
+  </ConstructorMethod>
+</JavaBean>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="PopupCanceledEvent" Package="oracle.adf.view.rich.event"
+          BeanClass="oracle.adf.view.rich.event.PopupCanceledEvent"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="false" Type="boolean" id="isAppropriateListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.event.FacesListener"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="void" id="processListener"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="p0" Type="javax.faces.event.FacesListener"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.view.rich.event.PopupCanceledEvent"
+                     BeanClass="oracle.adf.view.rich.event.PopupCanceledEvent"
+                     id="PopupCanceledEvent">
+    <ParameterInfo id="p0" Type="javax.faces.component.UIComponent"
+                   isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

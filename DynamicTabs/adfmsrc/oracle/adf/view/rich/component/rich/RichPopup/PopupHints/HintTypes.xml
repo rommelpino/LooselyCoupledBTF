@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="HintTypes"
+          Package="oracle.adf.view.rich.component.rich.RichPopup.PopupHints"
+          BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+          isJavaBased="true">
+  <Attribute Name="mnemonic" IsUpdateable="0" Type="java.lang.String"/>
+  <MethodAccessor IsCollection="true"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                  id="values" ReturnNodeName="HintTypes"
+                  CollectionBeanClass="UpdateableCollection"/>
+  <MethodAccessor IsCollection="false"
+                  Type="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                  BeanClass="oracle.adf.view.rich.component.rich.RichPopup.PopupHints.HintTypes"
+                  id="valueOf" ReturnNodeName="HintTypes">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.lang.String" id="toString"
+                  ReturnNodeName="Return"/>
+</JavaBean>

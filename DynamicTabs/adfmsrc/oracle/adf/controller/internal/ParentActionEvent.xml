@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.56.60"
+          id="ParentActionEvent" Package="oracle.adf.controller.internal"
+          BeanClass="oracle.adf.controller.internal.ParentActionEvent"
+          isJavaBased="true">
+  <Attribute Name="outcome" IsUpdateable="0" Type="java.lang.String"/>
+  <Attribute Name="rootOutcome" IsUpdateable="0" Type="boolean"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.adf.controller.internal.ParentActionEvent"
+                     BeanClass="oracle.adf.controller.internal.ParentActionEvent"
+                     id="ParentActionEvent">
+    <ParameterInfo id="p0" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="p1" Type="boolean" isStructured="false"/>
+  </ConstructorMethod>
+</JavaBean>

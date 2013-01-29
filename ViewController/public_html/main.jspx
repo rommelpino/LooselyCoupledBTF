@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/ui/pattern/dynamicShell/dynamicTabShell.jspx"
+                         value="#{bindings.pageTemplateBinding}" id="pt1">
+          <f:facet name="copyright"/>
+          <f:facet name="about"/>
+          <f:facet name="navigation">
+            <af:panelBox text="Menu" id="pb1">
+              <f:facet name="toolbar"/>
+              <af:panelList id="pl1">
+                <af:commandLink text="Job List" id="cl1"
+                                actionListener="#{launcher.launchMenu}">
+                  <f:attribute value="/WEB-INF/flows/job-list-task-flow.xml#job-list-task-flow"
+                               name="taskFlowId"/>
+                  <f:attribute name="title" value="Overview"/>
+                  <f:attribute name="newTab" value="false"/>
+                  <f:attribute value="/WEB-INF/flows/job-details-task-flow.xml#job-details-task-flow"
+                               name="detailTaskFlowId"/>
+                </af:commandLink>
+              </af:panelList>
+            </af:panelBox>
+          </f:facet>
+          <f:facet name="globalLinks"/>
+          <f:facet name="status"/>
+          <f:facet name="globalToolbar"/>
+          <f:facet name="globalSearch"/>
+          <f:facet name="globalTabs"/>
+          <f:facet name="welcome"/>
+          <f:facet name="innerToolbar"/>
+          <f:attribute name="legalAreaPosition" value="15"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

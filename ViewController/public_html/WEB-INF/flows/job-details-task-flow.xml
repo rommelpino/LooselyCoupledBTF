@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="job-details-task-flow">
+    <default-activity id="__1">job_details</default-activity>
+    <data-control-scope id="__16">
+      <isolated/>
+    </data-control-scope>
+    <input-parameter-definition id="__2">
+      <name id="__3">jobId</name>
+      <value>#{pageFlowScope.jobId}</value>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__23">
+      <name id="__22">raiseMessageEvent</name>
+      <value>#{pageFlowScope.raiseMessageEvent}</value>
+      <class>java.lang.Boolean</class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__5">
+      <name id="__4">editMode</name>
+      <value>#{pageFlowScope.editMode}</value>
+      <class>java.lang.Boolean</class>
+    </input-parameter-definition>
+    <managed-bean id="__43">
+      <managed-bean-name id="__42">jobDetailsForm</managed-bean-name>
+      <managed-bean-class id="__40">soadev.view.backing.JobDetailsForm</managed-bean-class>
+      <managed-bean-scope id="__41">backingBean</managed-bean-scope>
+    </managed-bean>
+    <view id="job_details">
+      <page>/fragments/job_details.jsff</page>
+    </view>
+    <task-flow-return id="rollback">
+      <outcome id="__6">
+        <name>rollback</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="commit">
+      <outcome id="__12">
+        <name>commit</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__8">
+      <from-activity-id id="__7">*</from-activity-id>
+      <control-flow-case id="__14">
+        <from-outcome id="__15">done</from-outcome>
+        <to-activity-id id="__13">commit</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome id="__11">rollback</from-outcome>
+        <to-activity-id id="__10">rollback</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

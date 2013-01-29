@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.56.60" id="DataBindings" SeparateXMLFiles="false"
+             Package="soadev.view" ClientType="Generic">
+  <pageMap>
+    <page path="/fragments/job_details.jsff"
+          usageId="soadev_view_job_detailsPageDef"/>
+    <page path="/fragments/job_list.jsff"
+          usageId="soadev_view_job_listPageDef"/>
+    <page path="/main.jspx" usageId="soadev_view_mainPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="soadev_view_job_detailsPageDef"
+          path="fragments.job_detailsPageDef"/>
+    <page id="soadev_view_job_listPageDef" path="fragments.job_listPageDef"/>
+    <page id="soadev_view_mainPageDef" path="soadev.view.pageDefs.mainPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="EventProducer" path="soadev.EventProducer"/>
+    <dc id="SessionEJBLocal" path="soadev.model.SessionEJBLocal"/>
+  </dataControlUsages>
+</Application>
