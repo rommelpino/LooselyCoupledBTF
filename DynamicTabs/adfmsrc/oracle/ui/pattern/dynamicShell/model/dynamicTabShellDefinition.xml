@@ -219,7 +219,7 @@
             <parameter name="tabContext" value="#{viewScope.tabContext}"/>
             <parameter name="title" value="#{payLoad.title}"/>
             <parameter name="taskFlowId" value="#{payLoad.taskFlowId}"/>
-            <parameter name="parameterMap" value="#{payLoad}"/>
+            <parameter name="parameterMap" value="#{payLoad.parameterMap}"/>
             <parameter name="newTab" value="true"/>
           </parameters>
         </consumer>

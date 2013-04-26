@@ -24,6 +24,7 @@ public class JobDetailsForm extends BaseForm {
         Messenger messenger = new Messenger();
         messenger.setAffirmativeOutcome("rollback");
         fireEvent("produceEvent", messenger);
+        System.out.println("messenger accepted? " +messenger.isAccepted());
         if (messenger.isAccepted()) {
             //stay on current page and wait for
             //the knight in shining armor

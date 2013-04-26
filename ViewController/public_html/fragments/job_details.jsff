@@ -2,7 +2,8 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
           xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
           xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelHeader text="#{pageFlowScope.editMode? 'Edit ':'View '}Job: #{bindings.jobId}" id="ph2">
+  <af:panelHeader text="#{pageFlowScope.editMode? 'Edit ':'View '}Job: #{bindings.jobId}" id="ph2"
+                  partialTriggers="ctb3 ctb4 ctb2 ctb1">
     <f:facet name="context"/>
     <f:facet name="menuBar"/>
     <f:facet name="toolbar">

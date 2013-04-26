@@ -7,6 +7,14 @@
     <variableIterator id="variables"/>
     <page path="oracle.ui.pattern.dynamicShell.model.dynamicTabShellDefinition"
           id="pageTemplateBinding" Refresh="ifNeeded"/>
+    <taskFlow id="samplefragmentstaskflow1"
+              taskFlowId="/WEB-INF/taskflows/sample/sample-fragments-task-flow.xml#sample-fragments-task-flow"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="companyId" value="1"/>
+      </parameters>
+    </taskFlow>
   </executables>
   <bindings/>
 </pageDefinition>

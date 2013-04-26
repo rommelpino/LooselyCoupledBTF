@@ -15,15 +15,14 @@
             <af:panelBox text="Menu" id="pb1">
               <f:facet name="toolbar"/>
               <af:panelList id="pl1">
-                <af:commandLink text="Job List" id="cl1"
-                                actionListener="#{launcher.launchMenu}">
-                  <f:attribute value="/WEB-INF/flows/job-list-task-flow.xml#job-list-task-flow"
-                               name="taskFlowId"/>
-                  <f:attribute name="title" value="Overview"/>
-                  <f:attribute name="newTab" value="false"/>
-                  <f:attribute value="/WEB-INF/flows/job-details-task-flow.xml#job-details-task-flow"
-                               name="detailTaskFlowId"/>
+                <af:commandLink text="Job List on tab" id="cl1"
+                                actionListener="#{launcher.launchJobList}">
                 </af:commandLink>
+                <af:commandLink text="Job List on Popup" id="cl2"
+                                actionListener="#{launcher.launchMenuOnNewWindow}">       
+                </af:commandLink>
+                 <af:commandLink text="Job List Remote on tab" id="cl3"
+                                  actionListener="#{launcher.launchRemoteOnTab}"></af:commandLink>
               </af:panelList>
             </af:panelBox>
           </f:facet>
@@ -32,7 +31,23 @@
           <f:facet name="globalToolbar"/>
           <f:facet name="globalSearch"/>
           <f:facet name="globalTabs"/>
-          <f:facet name="welcome"/>
+          <f:facet name="welcome">
+            <af:group id="g1">
+              <af:panelStretchLayout id="psl1">
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                  <af:region value="#{bindings.samplefragmentstaskflow1.regionModel}"
+                             id="r1"/>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:facet name="top">
+                  <af:outputText value="Welcome" id="ot1"
+                                 inlineStyle="font-size:large;"/>
+                </f:facet>
+              </af:panelStretchLayout>
+            </af:group>
+          </f:facet>
           <f:facet name="innerToolbar"/>
           <f:attribute name="legalAreaPosition" value="15"/>
         </af:pageTemplate>

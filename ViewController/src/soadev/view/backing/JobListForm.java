@@ -18,20 +18,23 @@ import oracle.jbo.uicli.binding.JUCtrlActionBinding;
 
 import soadev.model.Job;
 
+import soadev.view.utils.JSFUtils;
+
 
 public class JobListForm extends BaseForm {
-    //workaroud as I am failure to raise contextual
-    //events from table currency change
+
     public void jobSelected(ActionEvent event) {
-        if (unbox((Boolean)getPageFlowScope().get("initiateLaunchActivityEvent"))){//from TF param
-            Job job = (Job)getCurrentRowDataProvider("findAllJobsIterator");
-            Map<String, Object> payload = new HashMap<String, Object>();
-            payload.put("jobId", job.getJobId());
-            payload.put("taskFlowId",
-                        getPageFlowScope().get("detailTaskFlowId"));
-            payload.put("title", "Job: " + job.getJobId());
-            fireEvent("produceEvent", payload);
-        }
+        Job job = (Job)getCurrentRowDataProvider("findAllJobsIterator");
+        Map<String, Object> payload = new HashMap<String, Object>();
+        payload.put("jobId", job.getJobId());
+        payload.put("taskFlowId", getPageFlowScope().get("detailTaskFlowId"));
+        payload.put("title", "Job: " + job.getJobId());
+        Map<String, Object> parameterMap = new HashMap<String, Object>();
+        parameterMap.put("jobId", job.getJobId());
+        payload.put("parameterMap", parameterMap);
+        JSFUtils.setRequestAttribute("parameterMap", parameterMap);
+        fireEvent("produceEvent", payload);
     }
+
 }
 

@@ -87,6 +87,7 @@ public class BaseForm implements Serializable {
         (JUCtrlActionBinding)bindings.getControlBinding(producer);
     return actionBinding.getEventProducer();
   }
+
     
     
 

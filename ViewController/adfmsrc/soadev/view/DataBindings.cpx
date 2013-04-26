@@ -2,6 +2,11 @@
 <Application xmlns="http://xmlns.oracle.com/adfm/application"
              version="11.1.1.56.60" id="DataBindings" SeparateXMLFiles="false"
              Package="soadev.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/fragments/job_details.jsff"
           usageId="soadev_view_job_detailsPageDef"/>
